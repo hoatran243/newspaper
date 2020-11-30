@@ -149,12 +149,11 @@ def keywords(text):
     else:
         return dict()
 
-
+import nltk
+nltk.download('punkt')
 def split_sentences(text):
     """Split a large string into sentences
     """
-    import nltk
-    nltk.download('punkt')
     tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
 
     sentences = tokenizer.tokenize(text)
